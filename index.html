@@ -3,295 +3,362 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>CHROMEX | Future Look. Street Culture.</title>
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-background:#080808;
-color:white;
-font-family:Arial,sans-serif;
+:root {
+  --black: #080808;
+  --silver: #d9d9d9;
+  --grey: #888;
+  --white: #fff;
 }
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px;
-border-bottom:1px solid #333;
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: Arial, sans-serif;
 }
 
-.logo{
-font-size:28px;
-font-weight:900;
-letter-spacing:3px;
-color:#d9dce2;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  border-bottom: 1px solid #222;
 }
 
-nav a{
-color:white;
-text-decoration:none;
-margin-left:12px;
-font-size:13px;
+.logo {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  background: linear-gradient(white, #777);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.hero{
-padding:65px 20px;
-background:linear-gradient(120deg,#111,#292929,#080808);
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 12px;
+  letter-spacing: 2px;
 }
 
-.hero small{
-letter-spacing:4px;
-color:#aaa;
+.hero {
+  min-height: 570px;
+  padding: 100px 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse at 80% 50%, #252525 0%, #111 30%, #080808 70%);
 }
 
-.hero h1{
-font-size:65px;
-font-weight:900;
-line-height:0.95;
-margin:20px 0;
+.tag {
+  color: #aaa;
+  letter-spacing: 5px;
+  font-size: 11px;
+  margin-bottom: 25px;
 }
 
-.hero h1 span{
-color:#999;
+.hero h1 {
+  font-size: clamp(55px, 10vw, 110px);
+  line-height: .95;
+  font-weight: 900;
+  letter-spacing: -5px;
 }
 
-.hero p{
-color:#aaa;
-line-height:1.7;
-margin-bottom:25px;
+.hero h1 span {
+  color: #777;
 }
 
-.btn{
-background:white;
-color:black;
-padding:14px 25px;
-text-decoration:none;
-font-weight:bold;
-display:inline-block;
-border-radius:30px;
+.hero p {
+  color: #aaa;
+  margin-top: 25px;
+  line-height: 1.8;
+  max-width: 400px;
 }
 
-section{
-padding:35px 15px;
+.button {
+  display: inline-block;
+  width: fit-content;
+  margin-top: 30px;
+  padding: 15px 30px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
-.title{
-font-size:30px;
-margin-bottom:20px;
-font-weight:900;
+.section {
+  padding: 75px 7%;
 }
 
-.products{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
+.section-title {
+  font-size: 32px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
 }
 
-.product{
-background:#151515;
-border:1px solid #333;
-border-radius:12px;
-overflow:hidden;
+.section-subtitle {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 40px;
 }
 
-.product img{
-width:100%;
-height:190px;
-object-fit:cover;
-background:#222;
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
 }
 
-.product h3{
-font-size:15px;
-padding:10px;
+.product {
+  background: #111;
+  border: 1px solid #222;
+  padding-bottom: 22px;
 }
 
-.product p{
-color:#aaa;
-font-size:12px;
-padding:0 10px;
+.product img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #1a1a1a;
+  display: block;
 }
 
-.product button{
-margin:10px;
-padding:10px;
-width:calc(100% - 20px);
-background:white;
-color:black;
-border:none;
-border-radius:20px;
-font-weight:bold;
+.product-info {
+  padding: 20px;
 }
 
-.about{
-text-align:center;
-background:#111;
-border:1px solid #333;
-border-radius:15px;
-padding:30px 15px;
+.product h3 {
+  font-size: 15px;
+  letter-spacing: 1px;
 }
 
-.about h2{
-font-size:24px;
-margin-bottom:15px;
+.product p {
+  color: #888;
+  font-size: 12px;
+  margin-top: 10px;
+  line-height: 1.6;
 }
 
-.about p{
-color:#aaa;
-line-height:1.7;
+.status {
+  display: inline-block;
+  margin-top: 15px;
+  border: 1px solid #555;
+  padding: 7px 12px;
+  color: #ccc;
+  font-size: 10px;
+  letter-spacing: 2px;
 }
 
-footer{
-text-align:center;
-padding:30px 15px;
-border-top:1px solid #333;
-color:#888;
-font-size:12px;
-line-height:2;
+.about {
+  background: #111;
+  text-align: center;
 }
 
-footer strong{
-color:white;
-font-size:22px;
-letter-spacing:3px;
+.about p {
+  max-width: 600px;
+  margin: 25px auto;
+  color: #999;
+  line-height: 1.9;
+  font-size: 14px;
 }
 
+footer {
+  padding: 35px 7%;
+  text-align: center;
+  border-top: 1px solid #222;
+}
+
+footer h2 {
+  letter-spacing: 5px;
+  margin-bottom: 15px;
+}
+
+footer p {
+  color: #777;
+  font-size: 11px;
+  line-height: 2;
+}
+
+@media (min-width: 768px) {
+  .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .hero {
+    min-height: 650px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 20px 5%;
+  }
+
+  .logo {
+    font-size: 22px;
+    letter-spacing: 3px;
+  }
+
+  nav a {
+    margin-left: 10px;
+    font-size: 10px;
+  }
+
+  .hero {
+    padding: 80px 5%;
+  }
+
+  .hero h1 {
+    letter-spacing: -3px;
+  }
+
+  .section {
+    padding: 55px 5%;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .product-info {
+    padding: 13px;
+  }
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">CHROMEX</div>
+  <div class="logo">CHROMEX</div>
 
-<nav>
-<a href="#home">HOME</a>
-<a href="#shop">SHOP</a>
-<a href="#about">ABOUT</a>
-</nav>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#shop">SHOP</a>
+    <a href="#about">ABOUT</a>
+  </nav>
 </header>
 
-<div class="hero" id="home">
+<section class="hero" id="home">
+  <div class="tag">FUTURE LOOK. STREET CULTURE.</div>
 
-<small>Y2K STREETWEAR • LIFESTYLE • CULTURE</small>
+  <h1>
+    CHROME<br>
+    <span>ENERGY.</span>
+  </h1>
 
-<h1>
-CHROME<br>
-<span>ENERGY.</span>
-</h1>
+  <p>
+    Built for the next generation.
+    Futuristic streetwear, Y2K aesthetics
+    and a new era of self-expression.
+  </p>
 
-<p>
-Wear the vibe. Live the culture.<br>
-Only at CHROMEX.
-</p>
-
-<a href="#shop" class="btn">SHOP NOW →</a>
-
-</div>
-
-<section id="shop">
-
-<div class="title">OUR COLLECTION</div>
-
-<div class="products">
-
-<div class="product">
-<img src="https://placehold.co/400x500/171717/cccccc?text=CHROME+TEE"
-alt="Chrome Oversized Tee">
-
-<h3>Chrome Star Tee</h3>
-<p>Oversized Streetwear</p>
-
-<button onclick="alert('Store preview only. Checkout is not active yet.')">
-ADD TO CART
-</button>
-</div>
-
-<div class="product">
-<img src="https://placehold.co/400x500/171717/cccccc?text=GRAFFITI+TEE"
-alt="Graffiti Tee">
-
-<h3>Graffiti Tee</h3>
-<p>Y2K Street Culture</p>
-
-<button onclick="alert('Store preview only. Checkout is not active yet.')">
-ADD TO CART
-</button>
-</div>
-
-<div class="product">
-<img src="https://placehold.co/400x500/171717/cccccc?text=BAGGY+PANTS"
-alt="Baggy Pants">
-
-<h3>Baggy Utility Pants</h3>
-<p>Urban Loose Fit</p>
-
-<button onclick="alert('Store preview only. Checkout is not active yet.')">
-ADD TO CART
-</button>
-</div>
-
-<div class="product">
-<img src="https://placehold.co/400x500/171717/cccccc?text=CHROME+CAP"
-alt="Chrome Cap">
-
-<h3>Chrome Logo Cap</h3>
-<p>Street Accessories</p>
-
-<button onclick="alert('Store preview only. Checkout is not active yet.')">
-ADD TO CART
-</button>
-</div>
-
-</div>
+  <a href="#shop" class="button">EXPLORE COLLECTION</a>
 </section>
 
-<section id="about">
+<section class="section" id="shop">
+  <h2 class="section-title">THE COLLECTION</h2>
 
-<div class="about">
+  <p class="section-subtitle">
+    FUTURE-INSPIRED STREET CULTURE
+  </p>
 
-<h2>FUTURE LOOK.<br>STREET CULTURE.</h2>
+  <div class="products">
 
-<p>
-CHROMEX is a futuristic streetwear concept
-inspired by Y2K fashion, chrome aesthetics
-and urban culture.
-</p>
+    <div class="product">
+      <img
+        src="https://placehold.co/600x600/171717/d9d9d9?text=CHROME+STAR+TEE"
+        alt="Chrome Star Tee"
+      >
 
-<br>
+      <div class="product-info">
+        <h3>CHROME STAR TEE</h3>
+        <p>Oversized fit. Chrome-inspired graphics.</p>
+        <span class="status">COMING SOON</span>
+      </div>
+    </div>
 
-<p>
-BLACK • CHROME • FUTURE
-</p>
+    <div class="product">
+      <img
+        src="https://placehold.co/600x600/171717/d9d9d9?text=BAGGY+UTILITY"
+        alt="Baggy Utility Pants"
+      >
 
-</div>
+      <div class="product-info">
+        <h3>BAGGY UTILITY PANTS</h3>
+        <p>Relaxed silhouette. Urban street style.</p>
+        <span class="status">COMING SOON</span>
+      </div>
+    </div>
 
+    <div class="product">
+      <img
+        src="https://placehold.co/600x600/171717/d9d9d9?text=SILVER+LINK"
+        alt="Silver Link Chain"
+      >
+
+      <div class="product-info">
+        <h3>SILVER LINK CHAIN</h3>
+        <p>Metallic aesthetic. Y2K accessories.</p>
+        <span class="status">COMING SOON</span>
+      </div>
+    </div>
+
+    <div class="product">
+      <img
+        src="https://placehold.co/600x600/171717/d9d9d9?text=Y2K+SHIELD"
+        alt="Y2K Shield Sunglasses"
+      >
+
+      <div class="product-info">
+        <h3>Y2K SHIELD SHADES</h3>
+        <p>Futuristic eyewear. Bold energy.</p>
+        <span class="status">COMING SOON</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section about" id="about">
+  <h2 class="section-title">THE CHROMEX VISION</h2>
+
+  <p>
+    CHROMEX is more than fashion.
+    It is a statement of individuality,
+    futuristic aesthetics and street culture.
+    Designed for those who refuse to blend in.
+  </p>
+
+  <div class="tag">
+    OWN YOUR FUTURE. OWN YOUR STYLE.
+  </div>
 </section>
 
 <footer>
+  <h2>CHROMEX</h2>
 
-<strong>CHROMEX</strong>
+  <p>FUTURE LOOK. STREET CULTURE.</p>
 
-<br>
+  <p>
+    © 2026 CHROMEX. ALL RIGHTS RESERVED.
+  </p>
 
-FUTURE LOOK. STREET CULTURE.
-
-<br><br>
-
-© 2026 CHROMEX
-
-<br>
-
-Website preview only.
-Products and checkout are not live yet.
-
+  <p>
+    Website preview. Products and checkout
+    are not live yet.
+  </p>
 </footer>
 
 </body>
