@@ -3,364 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CHROMEX | Future Look. Street Culture.</title>
-
+<meta name="theme-color" content="#080808">
+<meta name="description" content="CHROMEX — futuristic streetwear, Y2K aesthetics and a new era of self-expression.">
+<title>CHROMEX — Future Look. Street Culture.</title>
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --black: #080808;
-  --silver: #d9d9d9;
-  --grey: #888;
-  --white: #fff;
-}
-
-body {
-  background: var(--black);
-  color: var(--white);
-  font-family: Arial, sans-serif;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 22px 7%;
-  border-bottom: 1px solid #222;
-}
-
-.logo {
-  font-size: 28px;
-  font-weight: 900;
-  letter-spacing: 5px;
-  background: linear-gradient(white, #777);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-size: 12px;
-  letter-spacing: 2px;
-}
-
-.hero {
-  min-height: 570px;
-  padding: 100px 7%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background:
-    radial-gradient(ellipse at 80% 50%, #252525 0%, #111 30%, #080808 70%);
-}
-
-.tag {
-  color: #aaa;
-  letter-spacing: 5px;
-  font-size: 11px;
-  margin-bottom: 25px;
-}
-
-.hero h1 {
-  font-size: clamp(55px, 10vw, 110px);
-  line-height: .95;
-  font-weight: 900;
-  letter-spacing: -5px;
-}
-
-.hero h1 span {
-  color: #777;
-}
-
-.hero p {
-  color: #aaa;
-  margin-top: 25px;
-  line-height: 1.8;
-  max-width: 400px;
-}
-
-.button {
-  display: inline-block;
-  width: fit-content;
-  margin-top: 30px;
-  padding: 15px 30px;
-  background: white;
-  color: black;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 2px;
-}
-
-.section {
-  padding: 75px 7%;
-}
-
-.section-title {
-  font-size: 32px;
-  letter-spacing: 3px;
-  margin-bottom: 12px;
-}
-
-.section-subtitle {
-  color: #888;
-  font-size: 13px;
-  margin-bottom: 40px;
-}
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
-}
-
-.product {
-  background: #111;
-  border: 1px solid #222;
-  padding-bottom: 22px;
-}
-
-.product img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  background: #1a1a1a;
-  display: block;
-}
-
-.product-info {
-  padding: 20px;
-}
-
-.product h3 {
-  font-size: 15px;
-  letter-spacing: 1px;
-}
-
-.product p {
-  color: #888;
-  font-size: 12px;
-  margin-top: 10px;
-  line-height: 1.6;
-}
-
-.status {
-  display: inline-block;
-  margin-top: 15px;
-  border: 1px solid #555;
-  padding: 7px 12px;
-  color: #ccc;
-  font-size: 10px;
-  letter-spacing: 2px;
-}
-
-.about {
-  background: #111;
-  text-align: center;
-}
-
-.about p {
-  max-width: 600px;
-  margin: 25px auto;
-  color: #999;
-  line-height: 1.9;
-  font-size: 14px;
-}
-
-footer {
-  padding: 35px 7%;
-  text-align: center;
-  border-top: 1px solid #222;
-}
-
-footer h2 {
-  letter-spacing: 5px;
-  margin-bottom: 15px;
-}
-
-footer p {
-  color: #777;
-  font-size: 11px;
-  line-height: 2;
-}
-
-@media (min-width: 768px) {
-  .products {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .hero {
-    min-height: 650px;
-  }
-}
-
-@media (max-width: 480px) {
-  header {
-    padding: 20px 5%;
-  }
-
-  .logo {
-    font-size: 22px;
-    letter-spacing: 3px;
-  }
-
-  nav a {
-    margin-left: 10px;
-    font-size: 10px;
-  }
-
-  .hero {
-    padding: 80px 5%;
-  }
-
-  .hero h1 {
-    letter-spacing: -3px;
-  }
-
-  .section {
-    padding: 55px 5%;
-  }
-
-  .section-title {
-    font-size: 26px;
-  }
-
-  .product-info {
-    padding: 13px;
-  }
-}
+:root{--black:#080808;--panel:#101010;--line:#252525;--silver:#d9d9d9;--muted:#929292;--white:#f7f7f7;--accent:#c7c7c7}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+header{height:76px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10;background:rgba(8,8,8,.94);backdrop-filter:blur(14px)}
+.logo{font-size:25px;font-weight:900;letter-spacing:5px;background:linear-gradient(180deg,#fff 15%,#777 90%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+nav{display:flex;gap:28px}
+nav a{font-size:10px;letter-spacing:2px;color:#c4c4c4;transition:color .2s}
+nav a:hover{color:#fff}
+.hero{min-height:610px;padding:100px 7% 85px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 78% 48%,#292929 0%,#151515 23%,#080808 65%)}
+.hero:after{content:"CX";position:absolute;right:5%;top:50%;transform:translateY(-50%);font-size:clamp(180px,35vw,440px);font-weight:900;letter-spacing:-25px;color:rgba(255,255,255,.025);pointer-events:none}
+.eyebrow{font-size:10px;letter-spacing:4px;color:#aaa;margin-bottom:24px}
+.hero h1{font-size:clamp(58px,10vw,120px);line-height:.88;letter-spacing:-6px;font-weight:900;position:relative;z-index:1}
+.hero h1 span{display:block;color:#858585}
+.hero p{max-width:420px;color:#aaa;font-size:14px;line-height:1.8;margin-top:26px;position:relative;z-index:1}
+.actions{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:32px;position:relative;z-index:1}
+.button{display:inline-flex;align-items:center;justify-content:center;padding:15px 25px;background:#f5f5f5;color:#080808;font-size:10px;font-weight:800;letter-spacing:2px;border:1px solid #f5f5f5;transition:all .2s}
+.button:hover{background:transparent;color:#fff}
+.text-link{font-size:10px;letter-spacing:2px;color:#bbb;border-bottom:1px solid #555;padding:10px 0}
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 7%;display:flex;justify-content:center;gap:24px;flex-wrap:wrap;color:#aaa;font-size:9px;letter-spacing:3px}
+.ticker span{color:#555}
+.section{padding:82px 7%}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:36px}
+.section-title{font-size:clamp(25px,4vw,38px);letter-spacing:2px;font-weight:800}
+.section-subtitle{color:#888;font-size:10px;letter-spacing:2px;margin-top:10px}
+.collection-note{font-size:10px;letter-spacing:1px;color:#777}
+.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.product{background:var(--panel);border:1px solid #202020;transition:transform .25s,border-color .25s;overflow:hidden}
+.product:hover{transform:translateY(-5px);border-color:#555}
+.product-art{aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 40%,#303030 0%,#171717 45%,#0e0e0e 100%)}
+.product-art:before{content:"";position:absolute;width:72%;height:72%;border:1px solid rgba(255,255,255,.08);transform:rotate(45deg)}
+.product-art img{width:100%;height:100%;object-fit:cover;display:block;position:absolute;inset:0}
+.product-art .art-label{font-size:clamp(18px,2.5vw,28px);font-weight:900;letter-spacing:3px;text-align:center;color:#d1d1d1;text-shadow:0 3px 18px #000;z-index:1;padding:15px}
+.product-info{padding:18px}
+.product-top{display:flex;justify-content:space-between;gap:8px;align-items:start}
+.product h3{font-size:12px;letter-spacing:1px;line-height:1.5}
+.product p{color:#888;font-size:11px;line-height:1.7;margin-top:8px}
+.status{display:inline-block;margin-top:14px;border:1px solid #4b4b4b;padding:7px 9px;color:#c7c7c7;font-size:8px;letter-spacing:2px}
+.about{background:#101010;border-top:1px solid #202020;border-bottom:1px solid #202020;text-align:center}
+.about .section-title{letter-spacing:3px}
+.about p{max-width:610px;margin:22px auto;color:#999;font-size:13px;line-height:2}
+.about .eyebrow{margin-top:28px;margin-bottom:0}
+footer{padding:38px 7%;text-align:center}
+footer h2{font-size:22px;letter-spacing:6px;margin-bottom:13px}
+footer p{color:#707070;font-size:9px;line-height:2.2;letter-spacing:1px}
+@media(max-width:900px){.products{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{min-height:550px}}
+@media(max-width:520px){header{height:68px;padding:0 5%}.logo{font-size:20px;letter-spacing:3px}nav{gap:12px}nav a{font-size:8px;letter-spacing:1px}.hero{padding:75px 5%;min-height:520px}.hero h1{letter-spacing:-3px}.hero p{font-size:12px}.section{padding:58px 5%}.section-head{display:block}.collection-note{margin-top:14px}.products{gap:10px}.product-info{padding:12px}.product h3{font-size:10px}.product p{font-size:10px}.status{font-size:7px;padding:6px 7px}.ticker{gap:12px;font-size:8px;padding:14px 5%}}
 </style>
 </head>
-
 <body>
-
 <header>
-  <div class="logo">CHROMEX</div>
-
-  <nav>
-    <a href="#home">HOME</a>
-    <a href="#shop">SHOP</a>
-    <a href="#about">ABOUT</a>
+  <a class="logo" href="#home" aria-label="CHROMEX home">CHROMEX</a>
+  <nav aria-label="Main navigation">
+    <a href="#home">HOME</a><a href="#shop">SHOP</a><a href="#about">VISION</a>
   </nav>
 </header>
-
+<main>
 <section class="hero" id="home">
-  <div class="tag">FUTURE LOOK. STREET CULTURE.</div>
-
-  <h1>
-    CHROME<br>
-    <span>ENERGY.</span>
-  </h1>
-
-  <p>
-    Built for the next generation.
-    Futuristic streetwear, Y2K aesthetics
-    and a new era of self-expression.
-  </p>
-
-  <a href="#shop" class="button">EXPLORE COLLECTION</a>
+  <div class="eyebrow">FUTURE LOOK. STREET CULTURE.</div>
+  <h1>CHROME<span>ENERGY.</span></h1>
+  <p>Built for the next generation. Futuristic streetwear, Y2K aesthetics and a new era of self-expression.</p>
+  <div class="actions"><a href="#shop" class="button">EXPLORE COLLECTION ↗</a><a href="#about" class="text-link">OUR VISION</a></div>
 </section>
-
+<div class="ticker" aria-label="Brand highlights">Y2K AESTHETICS <span>✦</span> STREET CULTURE <span>✦</span> FUTURE FIT <span>✦</span> OWN YOUR STYLE</div>
 <section class="section" id="shop">
-  <h2 class="section-title">THE COLLECTION</h2>
-
-  <p class="section-subtitle">
-    FUTURE-INSPIRED STREET CULTURE
-  </p>
-
+  <div class="section-head"><div><h2 class="section-title">THE COLLECTION</h2><p class="section-subtitle">FUTURE-INSPIRED STREET CULTURE</p></div><div class="collection-note">01 — 04 / PREVIEW DROP</div></div>
   <div class="products">
-
-    <div class="product">
-      <img
-        src="https://placehold.co/600x600/171717/d9d9d9?text=CHROME+STAR+TEE"
-        alt="Chrome Star Tee"
-      >
-
-      <div class="product-info">
-        <h3>CHROME STAR TEE</h3>
-        <p>Oversized fit. Chrome-inspired graphics.</p>
-        <span class="status">COMING SOON</span>
-      </div>
-    </div>
-
-    <div class="product">
-      <img
-        src="https://placehold.co/600x600/171717/d9d9d9?text=BAGGY+UTILITY"
-        alt="Baggy Utility Pants"
-      >
-
-      <div class="product-info">
-        <h3>BAGGY UTILITY PANTS</h3>
-        <p>Relaxed silhouette. Urban street style.</p>
-        <span class="status">COMING SOON</span>
-      </div>
-    </div>
-
-    <div class="product">
-      <img
-        src="https://placehold.co/600x600/171717/d9d9d9?text=SILVER+LINK"
-        alt="Silver Link Chain"
-      >
-
-      <div class="product-info">
-        <h3>SILVER LINK CHAIN</h3>
-        <p>Metallic aesthetic. Y2K accessories.</p>
-        <span class="status">COMING SOON</span>
-      </div>
-    </div>
-
-    <div class="product">
-      <img
-        src="https://placehold.co/600x600/171717/d9d9d9?text=Y2K+SHIELD"
-        alt="Y2K Shield Sunglasses"
-      >
-
-      <div class="product-info">
-        <h3>Y2K SHIELD SHADES</h3>
-        <p>Futuristic eyewear. Bold energy.</p>
-        <span class="status">COMING SOON</span>
-      </div>
-    </div>
-
+    <article class="product"><div class="product-art"><img src="https://placehold.co/600x750/171717/d9d9d9?text=CHROME+STAR+TEE" alt="Chrome Star Tee preview"></div><div class="product-info"><div class="product-top"><h3>CHROME STAR TEE</h3></div><p>Oversized fit. Chrome-inspired graphics.</p><span class="status">COMING SOON</span></div></article>
+    <article class="product"><div class="product-art"><img src="https://placehold.co/600x750/171717/d9d9d9?text=BAGGY+UTILITY" alt="Baggy Utility Pants preview"></div><div class="product-info"><h3>BAGGY UTILITY PANTS</h3><p>Relaxed silhouette. Urban street style.</p><span class="status">COMING SOON</span></div></article>
+    <article class="product"><div class="product-art"><img src="https://placehold.co/600x750/171717/d9d9d9?text=SILVER+LINK" alt="Silver Link Chain preview"></div><div class="product-info"><h3>SILVER LINK CHAIN</h3><p>Metallic aesthetic. Y2K accessories.</p><span class="status">COMING SOON</span></div></article>
+    <article class="product"><div class="product-art"><img src="https://placehold.co/600x750/171717/d9d9d9?text=Y2K+SHIELD" alt="Y2K Shield Shades preview"></div><div class="product-info"><h3>Y2K SHIELD SHADES</h3><p>Futuristic eyewear. Bold energy.</p><span class="status">COMING SOON</span></div></article>
   </div>
 </section>
-
-<section class="section about" id="about">
-  <h2 class="section-title">THE CHROMEX VISION</h2>
-
-  <p>
-    CHROMEX is more than fashion.
-    It is a statement of individuality,
-    futuristic aesthetics and street culture.
-    Designed for those who refuse to blend in.
-  </p>
-
-  <div class="tag">
-    OWN YOUR FUTURE. OWN YOUR STYLE.
-  </div>
-</section>
-
-<footer>
-  <h2>CHROMEX</h2>
-
-  <p>FUTURE LOOK. STREET CULTURE.</p>
-
-  <p>
-    © 2026 CHROMEX. ALL RIGHTS RESERVED.
-  </p>
-
-  <p>
-    Website preview. Products and checkout
-    are not live yet.
-  </p>
-</footer>
-
+<section class="section about" id="about"><h2 class="section-title">THE CHROMEX VISION</h2><p>CHROMEX is more than fashion. It is a statement of individuality, futuristic aesthetics and street culture. Designed for those who refuse to blend in.</p><div class="eyebrow">OWN YOUR FUTURE. OWN YOUR STYLE.</div></section>
+</main>
+<footer><h2>CHROMEX</h2><p>FUTURE LOOK. STREET CULTURE.</p><p>© 2026 CHROMEX. ALL RIGHTS RESERVED.</p><p>Website preview. Products and checkout are not live yet.</p></footer>
 </body>
-  </html>
-
+</html>
