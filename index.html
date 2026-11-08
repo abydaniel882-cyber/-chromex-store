@@ -1,1 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>CHROMEX | Future Look. Street Culture.</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#080808;
+color:white;
+font-family:Arial,sans-serif;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+border-bottom:1px solid #333;
+}
+
+.logo{
+font-size:28px;
+font-weight:900;
+letter-spacing:3px;
+color:#d9dce2;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:12px;
+font-size:13px;
+}
+
+.hero{
+padding:65px 20px;
+background:linear-gradient(120deg,#111,#292929,#080808);
+}
+
+.hero small{
+letter-spacing:4px;
+color:#aaa;
+}
+
+.hero h1{
+font-size:65px;
+font-weight:900;
+line-height:0.95;
+margin:20px 0;
+}
+
+.hero h1 span{
+color:#999;
+}
+
+.hero p{
+color:#aaa;
+line-height:1.7;
+margin-bottom:25px;
+}
+
+.btn{
+background:white;
+color:black;
+padding:14px 25px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+border-radius:30px;
+}
+
+section{
+padding:35px 15px;
+}
+
+.title{
+font-size:30px;
+margin-bottom:20px;
+font-weight:900;
+}
+
+.products{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+.product{
+background:#151515;
+border:1px solid #333;
+border-radius:12px;
+overflow:hidden;
+}
+
+.product img{
+width:100%;
+height:190px;
+object-fit:cover;
+background:#222;
+}
+
+.product h3{
+font-size:15px;
+padding:10px;
+}
+
+.product p{
+color:#aaa;
+font-size:12px;
+padding:0 10px;
+}
+
+.product button{
+margin:10px;
+padding:10px;
+width:calc(100% - 20px);
+background:white;
+color:black;
+border:none;
+border-radius:20px;
+font-weight:bold;
+}
+
+.about{
+text-align:center;
+background:#111;
+border:1px solid #333;
+border-radius:15px;
+padding:30px 15px;
+}
+
+.about h2{
+font-size:24px;
+margin-bottom:15px;
+}
+
+.about p{
+color:#aaa;
+line-height:1.7;
+}
+
+footer{
+text-align:center;
+padding:30px 15px;
+border-top:1px solid #333;
+color:#888;
+font-size:12px;
+line-height:2;
+}
+
+footer strong{
+color:white;
+font-size:22px;
+letter-spacing:3px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">CHROMEX</div>
+
+<nav>
+<a href="#home">HOME</a>
+<a href="#shop">SHOP</a>
+<a href="#about">ABOUT</a>
+</nav>
+</header>
+
+<div class="hero" id="home">
+
+<small>Y2K STREETWEAR • LIFESTYLE • CULTURE</small>
+
+<h1>
+CHROME<br>
+<span>ENERGY.</span>
+</h1>
+
+<p>
+Wear the vibe. Live the culture.<br>
+Only at CHROMEX.
+</p>
+
+<a href="#shop" class="btn">SHOP NOW →</a>
+
+</div>
+
+<section id="shop">
+
+<div class="title">OUR COLLECTION</div>
+
+<div class="products">
+
+<div class="product">
+<img src="https://placehold.co/400x500/171717/cccccc?text=CHROME+TEE"
+alt="Chrome Oversized Tee">
+
+<h3>Chrome Star Tee</h3>
+<p>Oversized Streetwear</p>
+
+<button onclick="alert('Store preview only. Checkout is not active yet.')">
+ADD TO CART
+</button>
+</div>
+
+<div class="product">
+<img src="https://placehold.co/400x500/171717/cccccc?text=GRAFFITI+TEE"
+alt="Graffiti Tee">
+
+<h3>Graffiti Tee</h3>
+<p>Y2K Street Culture</p>
+
+<button onclick="alert('Store preview only. Checkout is not active yet.')">
+ADD TO CART
+</button>
+</div>
+
+<div class="product">
+<img src="https://placehold.co/400x500/171717/cccccc?text=BAGGY+PANTS"
+alt="Baggy Pants">
+
+<h3>Baggy Utility Pants</h3>
+<p>Urban Loose Fit</p>
+
+<button onclick="alert('Store preview only. Checkout is not active yet.')">
+ADD TO CART
+</button>
+</div>
+
+<div class="product">
+<img src="https://placehold.co/400x500/171717/cccccc?text=CHROME+CAP"
+alt="Chrome Cap">
+
+<h3>Chrome Logo Cap</h3>
+<p>Street Accessories</p>
+
+<button onclick="alert('Store preview only. Checkout is not active yet.')">
+ADD TO CART
+</button>
+</div>
+
+</div>
+</section>
+
+<section id="about">
+
+<div class="about">
+
+<h2>FUTURE LOOK.<br>STREET CULTURE.</h2>
+
+<p>
+CHROMEX is a futuristic streetwear concept
+inspired by Y2K fashion, chrome aesthetics
+and urban culture.
+</p>
+
+<br>
+
+<p>
+BLACK • CHROME • FUTURE
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<strong>CHROMEX</strong>
+
+<br>
+
+FUTURE LOOK. STREET CULTURE.
+
+<br><br>
+
+© 2026 CHROMEX
+
+<br>
+
+Website preview only.
+Products and checkout are not live yet.
+
+</footer>
+
+</body>
+  </html>
