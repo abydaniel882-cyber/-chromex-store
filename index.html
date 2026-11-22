@@ -163,16 +163,16 @@ header{border-bottom:1px solid #666d75}
 <script>
 (function(){
 const designs=[
-{name:'Chrome Spike',art:'CHROMEX',mini:'SPIKE / EST. 2026',sprite:0},
+{name:'Chrome Signal',art:'CHROMEX',mini:'ORBITAL / 001',sprite:0},
 {name:'Afterhours Angel',art:'AFTERHOURS',mini:'DREAM BIGGER / LIVE LONGER',sprite:1},
 {name:'Chrome Orbit',art:'CHROMEX',mini:'INTO THE UNKNOWN',sprite:2},
-{name:'Bad Habits',art:'BAD\nHABITS',mini:'CHROMEX / EST. 2026',sprite:3},
-{name:'See Beyond',art:'SEE\nBEYOND',mini:'THE ORDINARY',sprite:4},
-{name:'Chrome Star',art:'CHROMEX',mini:'BREAK THE LIMITS',sprite:5},
-{name:'Lost Soul',art:'LOST\nSOUL',mini:'CHROMEX / EST. 2026',sprite:6},
+{name:'Bad Habits',art:'BAD\\nHABITS',mini:'EST. 2026',sprite:3},
+{name:'Eye Vision',art:'SEE\\nBEYOND',mini:'THE ORDINARY',sprite:4},
+{name:'Break Limits',art:'CHROMEX',mini:'BREAK THE LIMITS',sprite:5},
+{name:'Lost Soul',art:'LOST\\nSOUL',mini:'EST. 2026',sprite:6},
 {name:'Worldwide',art:'CHROMEX',mini:'WORLDWIDE',sprite:7},
-{name:'Chrome Wavy Star',art:'CHROMEX',mini:'FOREVER',sprite:8},
-{name:'Chrome Flame',art:'CHROMEX',mini:'STAY DIFFERENT',sprite:9}
+{name:'Star Forever',art:'CHROMEX',mini:'FOREVER',sprite:8},
+{name:'Chaos Flame',art:'CHROMEX',mini:'STAY DIFFERENT',sprite:9}
 ];
 const modal=document.getElementById('cxDesignModal'),choiceBox=document.getElementById('cxDesignChoices');
 let selectedProduct='',selectedImage='',selectedDesign=designs[0];
@@ -231,4 +231,23 @@ header{border-bottom-color:#646b73!important}
 .cx-design.selected{border-color:#f1f3f5!important;box-shadow:0 0 14px #dce3ec20!important}
 .cx-design-art{border-color:#444b53!important}
 @media(max-width:560px){.product-info:after{font-size:8px}.preview-disclaimer{font-size:7px}}
-</style></body></html>
+</style>
+<style id="chromex-design-section-refresh">
+/* Winterland design-picker layout: clean artwork cards, chrome black */
+.cx-design-label{font-size:11px!important;letter-spacing:3px!important;color:#cbd1d8!important;margin:18px 0 12px!important}
+.cx-designs{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:10px!important}
+.cx-design{padding:10px!important;min-height:0!important;background:#090a0c!important;border:1px solid #454b52!important;display:flex!important;flex-direction:column!important;gap:7px!important}
+.cx-design.selected{border:2px solid #e9edf2!important;box-shadow:0 0 15px #dfe5eb22!important}
+.cx-design-art{height:auto!important;aspect-ratio:3/4!important;background:#020304!important;margin:0!important;padding:5px!important;border:1px solid #2b3036!important}
+.cx-design-art svg{width:100%!important;height:100%!important;max-height:none!important;object-fit:contain!important}
+.cx-design .art{font:900 clamp(17px,2.1vw,26px)/.88 'Barlow Condensed'!important;letter-spacing:-.3px!important;color:transparent!important;background:linear-gradient(#f5f7f9,#7b848e)!important;background-clip:text!important;-webkit-background-clip:text!important}
+.cx-design small{font-size:8px!important;line-height:1.5!important;letter-spacing:1.2px!important;margin-top:0!important;color:#aeb6bf!important}
+.cx-preview{grid-template-columns:minmax(0,1fr) minmax(0,1.25fr)!important;gap:16px!important}
+.cx-preview-photo{background:#090a0c!important;border:1px solid #363c43!important;min-height:330px!important}
+.cx-preview-photo img{filter:grayscale(1)!important}
+.cx-modal-box{background:#060708!important;border-color:#5a626b!important}
+.cx-modal-head{border-color:#383e45!important}
+.cx-modal-bottom{border-top:1px solid #383e45!important;padding-top:12px!important}
+@media(max-width:700px){.cx-designs{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}.cx-preview{grid-template-columns:1fr!important}.cx-preview-photo{min-height:280px!important}.cx-design-art{aspect-ratio:1/1!important}.cx-design{padding:10px!important}.cx-design .art{font-size:27px!important}.cx-design small{font-size:8px!important}}
+</style>
+</body></html>
