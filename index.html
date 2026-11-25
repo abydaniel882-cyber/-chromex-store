@@ -143,7 +143,7 @@ header{border-bottom:1px solid #666d75}
 document.getElementById('chromexOrder').addEventListener('submit',function(e){
   e.preventDefault();
   const d=new FormData(this);
-  const body=['CHROMEX PRE-LAUNCH PRODUCT ENQUIRY','Name: '+d.get('name'),'Customer email: '+d.get('email'),'Product: '+d.get('product'),'Size: '+d.get('size'),'Print design: '+(d.get('design')||'Not selected'),'Colour: '+(d.get('colour')||'Not specified'),'PIN: '+d.get('pincode'),'Notes: '+(d.get('notes')||'None'),'Reminder: This is an enquiry only, not an order or payment.'].join('\\n');
+  const body=['CHROMEX PRE-LAUNCH PRODUCT ENQUIRY','Name: '+d.get('name'),'Customer email: '+d.get('email'),'Product: '+d.get('product'),'Size: '+d.get('size'),'Print design: '+(d.get('design')||'Not selected'),'Colour: '+(d.get('colour')||'Not specified'),'PIN: '+d.get('pincode'),'Notes: '+(d.get('notes')||'None'),'Reminder: This is an enquiry only, not an order or payment.'].join('\n');
   const fallback=document.getElementById('cxEnquiryFallback');
   const copyText=document.getElementById('cxEnquiryText');
   const status=document.getElementById('cxCopyStatus');
